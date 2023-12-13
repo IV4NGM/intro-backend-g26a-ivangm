@@ -1,3 +1,4 @@
+require('dotenv').config() // Cargo las variables de entorno del archivo .env
 // Update with your config settings.
 
 /**
@@ -8,9 +9,9 @@ module.exports = {
   development: {
     client: 'postgresql',
     connection: {
-      database: 'knexapi',
-      user: 'postgres',
-      password: 'admin'
+      database: process.env.DB_NAME_DEV,
+      user: process.env.DB_USER_DEV,
+      password: process.env.DB_PASS_DEV
     }
   },
 
